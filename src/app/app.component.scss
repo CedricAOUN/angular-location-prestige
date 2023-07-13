@@ -1,0 +1,28 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+.nav-container {
+  z-index: 1000;
+  max-height: 70px;
+  position: fixed;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 100vw;
+  top: 0;
+  background-color: rgba(220,0,0, 0.5);
+  -webkit-box-shadow: 0px 1px 6px 4px rgba(0,0,0,0.68);
+  box-shadow: 0px 1px 6px 4px rgba(0,0,0,0.68);
+}
+
+
+ul {
+  display: flex;
+  width: inherit;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+  gap: 3em;
+}
+
+
+

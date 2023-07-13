@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-location-prestige';
+
+  scrollToId(elem: HTMLElement): void {
+    elem.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+  }
 }

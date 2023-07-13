@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+}
+
+
+.debug {
+  border: 3px solid #ee00a0;
+  background: linear-gradient(#000000, #ffdc06);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
