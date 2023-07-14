@@ -1,0 +1,67 @@
+.header-img {
+  height: calc(100vh - 70px);
+  width: 100%;
+}
+
+.header-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-bottom-center {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: hsl(0,0, 90, 0.8);
+}
+
+.card-input {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.brands-header {
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 150px;
+}
+
+#brands {
+  height: calc(100vh - 70px);
+}
+
+.section-container {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-container {
+  display: flex;
+  gap: 1em;
+  padding: 2em;
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  width: 70%;
+  padding: 3em;
+  flex-wrap: wrap;
+}
+
+.brand-logos > img {
+  max-height: 100px;
+  max-width: 100px;
+}
+.brand-description {
+  margin-top: 2rem;
+}

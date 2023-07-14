@@ -1,0 +1,38 @@
+<div>
+  <img class="header-img" src="https://bigtex.com/wp-content/uploads/2018/05/placeholder-1920x1080.png">
+  <div class="header-center">
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title>Retrait et date</mat-card-title>
+        <mat-card-subtitle>
+          <mat-form-field>
+            <input matInput class="card-input">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput matNativeControl="datetime-local" class="card-input">
+          </mat-form-field>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-button color="primary">Voir les voitures</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div (click)="scrollToId(brands)" class="header-bottom-center">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="expand_more"></mat-icon>
+  </div>
+</div>
+<section #brands id="brands">
+  <h1 class="brands-header">Nos marques</h1>
+    <div class="brand-container">
+      <div class="brand-logos">
+        <img *ngFor="let car of cars" [src]="car.logo">
+      </div>
+      <div class="brand-description">
+        <h3>Les meilleures marques de luxe</h3>
+        <p>Nous disposons d'une sélection des meilleures et des plus luxueuses marques de véhicules disponibles à la location. Tous sont prêts à vous être livrés, où que vous soyez et quand vous le souhaitez.</p>
+      </div>
+    </div>
+</section>
+
+
