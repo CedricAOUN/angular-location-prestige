@@ -1,8 +1,14 @@
 #car-selector {
-  height: calc(100vh - 70px)
+  padding-top: 0;
+  height: auto;
 }
-.section-header {
+
+.centered-text {
   text-align: center;
-  padding-top: 2rem;
+}
+
+#location-selector {
+  height: 100vh;
+  padding-top: 70px;
 }
 

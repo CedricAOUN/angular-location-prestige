@@ -13,6 +13,11 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatListModule} from "@angular/material/list";
 import { CarlistComponent } from './cars/carlist/carlist.component';
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatIconModule} from "@angular/material/icon";
+import {LeafletModule} from "@asymmetrik/ngx-leaflet";
+import { LocationComponent } from './cars/location/location.component';
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,17 +25,22 @@ import {MatGridListModule} from "@angular/material/grid-list";
     CarsComponent,
     AboutComponent,
     ContactComponent,
-    CarlistComponent
+    CarlistComponent,
+    LocationComponent,
   ],
-    imports: [
-        HomeModule,
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        MatListModule,
-        MatGridListModule
-    ],
+  imports: [
+    HomeModule,
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatListModule,
+    MatGridListModule,
+    MatIconModule,
+    LeafletModule,
+    MatInputModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

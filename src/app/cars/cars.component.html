@@ -3,12 +3,16 @@
   <div class="car-container">
       <app-carlist></app-carlist>
   </div>
-</section>
-<section id="area-selector">
 
-
+  <div (click)="scrollToId(area)" class="centered-text">
+    <mat-icon aria-hidden="false" aria-label="expand mode" fontIcon="expand_more"></mat-icon>
+  </div>
 </section>
-<section id="payment">
+<section id="location-selector" #area>
+  <h1>Sélectionner une addresse</h1>
+  <app-location></app-location>
+</section>
+<section id="payment" #payment>
 
 
 </section>

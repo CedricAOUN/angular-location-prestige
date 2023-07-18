@@ -28,12 +28,6 @@
 
 .brands-header {
   text-align: center;
-  padding-top: 90px;
-  padding-bottom: 150px;
-}
-
-#brands {
-  height: calc(100vh - 70px);
 }
 
 .section-container {
@@ -46,7 +40,6 @@
 .brand-container {
   display: flex;
   gap: 1em;
-  padding: 2em;
 }
 
 .brand-logos {

@@ -9,7 +9,7 @@
   box-sizing: border-box;
   width: 100vw;
   top: 0;
-  background-color: rgba(220,0,0, 0.5);
+  background-color: rgb(220,0,0);
   -webkit-box-shadow: 0px 1px 6px 4px rgba(0,0,0,0.68);
   box-shadow: 0px 1px 6px 4px rgba(0,0,0,0.68);
 }
@@ -24,5 +24,17 @@ ul {
   gap: 3em;
 }
 
-
+.footer-container {
+  height: 300px;
+  background-color: #282828;
+  display: flex;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  align-items: center;
+}
+h4 {
+  text-align: center;
+  background-color: #282828;
+  color: white;
+}
 

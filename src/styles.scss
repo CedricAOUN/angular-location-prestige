@@ -2,8 +2,8 @@
 
 body {
   margin: 0;
+  padding-bottom: 0;
 }
-
 
 .debug {
   border: 3px solid #ee00a0;
@@ -12,3 +12,12 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+section {
+  position: relative;
+  height: 50vh;
+  padding-top: 75px;
+}
+section > h1 {
+  text-align: center;
+}
