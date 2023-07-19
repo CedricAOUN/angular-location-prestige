@@ -12,3 +12,14 @@
   padding-top: 70px;
 }
 
+.stripe-container {
+  display: flex;
+  justify-content: center;
+}
+
+app-checkout {
+  text-align: center;
+  background-color: #2d2d2d;
+  padding-left: 2em;
+  padding-right: 2em;
+}

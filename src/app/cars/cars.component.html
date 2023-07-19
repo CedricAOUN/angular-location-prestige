@@ -11,8 +11,13 @@
 <section id="location-selector" #area>
   <h1>Sélectionner une addresse</h1>
   <app-location></app-location>
+  <div (click)="scrollToId(payment)" class="centered-text">
+    <mat-icon aria-hidden="false" aria-label="expand mode" fontIcon="expand_more"></mat-icon>
+  </div>
 </section>
-<section id="payment" #payment>
-
-
+<section id="checkout" #payment>
+  <h1>Paiement</h1>
+  <div class="stripe-container">
+    <app-checkout></app-checkout>
+  </div>
 </section>

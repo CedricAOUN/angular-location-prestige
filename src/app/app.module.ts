@@ -8,7 +8,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HomeModule} from "./home/home.module";
-import {ViewportScroller} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
 import {MatListModule} from "@angular/material/list";
 import { CarlistComponent } from './cars/carlist/carlist.component';
@@ -18,6 +17,8 @@ import {LeafletModule} from "@asymmetrik/ngx-leaflet";
 import { LocationComponent } from './cars/location/location.component';
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
+import {environment} from "../environments/environment";
+import {CheckoutComponent} from "./cars/checkout/checkout.component";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {FormsModule} from "@angular/forms";
     ContactComponent,
     CarlistComponent,
     LocationComponent,
+    CheckoutComponent,
   ],
   imports: [
     HomeModule,
