@@ -6,6 +6,8 @@ import { MatCardModule } from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [HomeComponent],
@@ -16,6 +18,8 @@ import {MatIconModule} from "@angular/material/icon";
     MatButtonModule,
     MatInputModule,
     MatIconModule,
+    MatDatepickerModule,
+    FormsModule,
   ],
 })
 export class HomeModule { }

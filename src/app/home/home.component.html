@@ -5,16 +5,29 @@
       <mat-card-header>
         <mat-card-title>Retrait et date</mat-card-title>
         <mat-card-subtitle>
-          <mat-form-field>
-            <input matInput class="card-input">
+          <p class="error-msg" *ngIf="errorMsg">{{errorMsg}}</p>
+          <mat-form-field formGroup="dateAddressForm">
+            <mat-label>Addresse:</mat-label>
+            <input matInput class="card-input" [(ngModel)]="address">
           </mat-form-field>
           <mat-form-field>
-            <input matInput matNativeControl="datetime-local" class="card-input">
+            <mat-label>Date de retrait:</mat-label>
+            <input [(ngModel)]="startDate" matInput matNativeControl="datetime-local" name="receive" class="card-input" [matDatepicker]="receivePicker" (click)="receivePicker.open()" [min]="minDate">
+
+            <mat-datepicker-toggle matPrefix [for]="receivePicker" ></mat-datepicker-toggle>
+            <mat-datepicker #receivePicker [touchUi]="true"></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Date de retour:</mat-label>
+            <input [(ngModel)]="returnDate" matInput matNativeControl="datetime-local" name="return" class="card-input" [matDatepicker]="returnPicker" (click)="returnPicker.open()" [min]="minDate">
+
+            <mat-datepicker-toggle matPrefix [for]="returnPicker"></mat-datepicker-toggle>
+            <mat-datepicker #returnPicker [touchUi]="true"></mat-datepicker>
           </mat-form-field>
         </mat-card-subtitle>
       </mat-card-header>
       <mat-card-actions>
-        <button mat-button color="primary">Voir les voitures</button>
+        <button mat-button color="primary" (click)="preloadCars(address, startDate, returnDate)">Voir les voitures</button>
       </mat-card-actions>
     </mat-card>
   </div>

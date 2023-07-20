@@ -17,8 +17,9 @@ import {LeafletModule} from "@asymmetrik/ngx-leaflet";
 import { LocationComponent } from './cars/location/location.component';
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
-import {environment} from "../environments/environment";
 import {CheckoutComponent} from "./cars/checkout/checkout.component";
+import {OrderService} from "../services/order.service";
+import {MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -42,8 +43,9 @@ import {CheckoutComponent} from "./cars/checkout/checkout.component";
     MatIconModule,
     LeafletModule,
     MatInputModule,
+    MatNativeDateModule,
   ],
-  providers: [],
+  providers: [OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
