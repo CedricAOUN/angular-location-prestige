@@ -1,5 +1,7 @@
 .header-img {
   height: calc(100vh - 70px);
+  min-height: 720px;
+  min-width: 1080px;
   width: 100%;
 }
 
@@ -68,6 +70,19 @@ mat-form-field {
   margin-left: 1em;
   margin-right: 1em;
 }
+
+.scroll-chevron {
+  background-color: rgba(255, 255, 255, 0.16);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+#brands > .scroll-chevron {
+  background-color: rgba(0, 0, 0, 0.16) ;
+}
+
+
+
 mat-card-actions {
   justify-content: center;
 }
@@ -77,3 +92,29 @@ mat-card-actions {
   color: red;
 }
 
+#delivery-info {
+  background-color: #2c2c2c;
+}
+.delivery-info-header {
+  color: white;
+}
+
+.delivery-container {
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 3rem;
+}
+
+.delivery-container > p {
+  flex-basis: 60%;
+  text-align: center;
+  vertical-align: center;
+  font-size: 20px;
+}
+
+.delivery-img {
+  border-radius: 5px;
+}

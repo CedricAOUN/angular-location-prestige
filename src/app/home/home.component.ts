@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent extends AppComponent {
+export class HomeComponent extends AppComponent implements OnInit {
   cars = carData.cars;
   minDate: Date = new Date();
   errorMsg: string = "";
@@ -25,6 +25,11 @@ export class HomeComponent extends AppComponent {
 
   }
 
+  ngOnInit() {
+    this.orderService.currentStartDate.subscribe(sDate => this.startDate = sDate)
+    this.orderService.currentEndDate.subscribe(eDate => this.returnDate = eDate)
+  }
+
 
   preloadCars(addr: string, date: Date, returnDate: Date) {
     returnDate.setHours(0,0,0,0);
@@ -35,6 +40,8 @@ export class HomeComponent extends AppComponent {
       this.router.navigate(['/cars'])
       this.orderService.changeAddress(addr)
       this.orderService.changeDays(days)
+      this.orderService.changeStartDate(date)
+      this.orderService.changeEndDate(returnDate);
     } else {
       this.errorMsg = "Veuillez saisir une adresse"
     }

@@ -20,6 +20,7 @@ export class CarlistComponent implements OnInit{
   }
 
   setSelected(index: number) {
-    this.selected = data.cars[index];
+    // this.selected = data.cars[index];
+    this.orderService.changeSelectedCar(data.cars[index])
   }
 }

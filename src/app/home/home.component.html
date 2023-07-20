@@ -1,23 +1,23 @@
 <div>
-  <img class="header-img" src="https://bigtex.com/wp-content/uploads/2018/05/placeholder-1920x1080.png">
+  <img class="header-img" src="https://images.hdqwalls.com/wallpapers/bugatti-chiron-cgi-8k-b2.jpg">
   <div class="header-center">
     <mat-card class="card">
       <mat-card-header>
         <mat-card-title>Retrait et date</mat-card-title>
         <mat-card-subtitle>
           <p class="error-msg" *ngIf="errorMsg">{{errorMsg}}</p>
-          <mat-form-field formGroup="dateAddressForm">
-            <mat-label>Addresse:</mat-label>
+          <mat-form-field formGroup="dateAddressForm" class="input" color="accent">
+            <mat-label>Adresse:</mat-label>
             <input matInput class="card-input" [(ngModel)]="address">
           </mat-form-field>
-          <mat-form-field>
+          <mat-form-field class="input" color="accent">
             <mat-label>Date de retrait:</mat-label>
             <input [(ngModel)]="startDate" matInput matNativeControl="datetime-local" name="receive" class="card-input" [matDatepicker]="receivePicker" (click)="receivePicker.open()" [min]="minDate">
 
             <mat-datepicker-toggle matPrefix [for]="receivePicker" ></mat-datepicker-toggle>
             <mat-datepicker #receivePicker [touchUi]="true"></mat-datepicker>
           </mat-form-field>
-          <mat-form-field>
+          <mat-form-field class="input" color="accent">
             <mat-label>Date de retour:</mat-label>
             <input [(ngModel)]="returnDate" matInput matNativeControl="datetime-local" name="return" class="card-input" [matDatepicker]="returnPicker" (click)="returnPicker.open()" [min]="minDate">
 
@@ -31,7 +31,7 @@
       </mat-card-actions>
     </mat-card>
   </div>
-  <div (click)="scrollToId(brands)" class="header-bottom-center">
+  <div (click)="scrollToId(brands)" class="header-bottom-center scroll-chevron">
     <mat-icon aria-hidden="false" aria-label="expand more" fontIcon="expand_more"></mat-icon>
   </div>
 </div>
@@ -46,6 +46,16 @@
         <p>Nous disposons d'une sélection des meilleures et des plus luxueuses marques de véhicules disponibles à la location. Tous sont prêts à vous être livrés, où que vous soyez et quand vous le souhaitez.</p>
       </div>
     </div>
+  <div (click)="scrollToId(delivery)" class="header-bottom-center scroll-chevron">
+    <mat-icon aria-hidden="false" aria-label="expand more" fontIcon="expand_more"></mat-icon>
+  </div>
+</section>
+<section id="delivery-info" #delivery>
+  <h1 class="delivery-info-header">Livraison</h1>
+  <div class="delivery-container">
+    <p>We will deliver the car directly to your doorstep, or any other address you choose, in pristine condition, for no additional charges. </p>
+    <img class="delivery-img" src="https://agate.group/upload/img/about/02.jpg">
+  </div>
 </section>
 
 

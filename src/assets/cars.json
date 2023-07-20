@@ -10,7 +10,7 @@
       "drivetrain": "AWD",
       "img": "https://www.bugatti.com/fileadmin/_processed_/sei/p54/se-image-4799f9106491ebb58ca3351f6df5c44a.jpg",
       "logo": "https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/bugatti.png",
-      "rent": 250
+      "rent": 5000
     },
     {
       "model": "Continental",
@@ -22,7 +22,7 @@
       "drivetrain": "AWD",
       "img": "https://www.lepoint.fr/images/2021/03/23/21455489lpw-21455539-article-bentley-continental-gt-speed-jpg_7787313_1250x625.jpg",
       "logo": "https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/bentley.png",
-      "rent": 120
+      "rent": 500
     },
     {
       "model": "Vantage",
@@ -34,7 +34,7 @@
       "drivetrain": "RWD",
       "img": "https://images.caradisiac.com/images/2/4/0/8/182408/S0-essai-aston-martin-v8-vantage-amr-2020-une-classe-a-part-626707.jpg",
       "logo": "https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/optimized/aston-martin.png",
-      "rent": 150
+      "rent": 750
     },
     {
       "model": "LaFerrari",
@@ -46,7 +46,7 @@
       "drivetrain": "RWD",
       "img": "https://www.turbo.fr/sites/default/files/2022-04/2017-ferrari-laferrari-aperta-gets-listed-with-161-miles-promptly-sparks-bidding-contest-187270_1.jpg",
       "logo": "https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/ferrari.png",
-      "rent": 325
+      "rent": 15000
     }
   ]
 }
