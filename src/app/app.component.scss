@@ -49,6 +49,7 @@ li {
   justify-content: center;
 }
 
+
 a {
   height: 100%;
   width: 100%;
@@ -59,8 +60,14 @@ a {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+a > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 a:hover {
   background-color: #7a0000;
+  overflow: hidden;
 }
 
 a:active {

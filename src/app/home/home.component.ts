@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import carData from '../../assets/cars.json'
 import {AppComponent} from "../app.component";
-import {OrderService} from "../../services/order.service";
+import {OrderService} from "../services/order.service";
 import {Router} from "@angular/router";
 
 @Component({

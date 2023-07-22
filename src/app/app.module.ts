@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HomeModule} from "./home/home.module";
 import {MatButtonModule} from "@angular/material/button";
 import {MatListModule} from "@angular/material/list";
-import { CarlistComponent } from './cars/carlist/carlist.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatIconModule} from "@angular/material/icon";
 import {LeafletModule} from "@asymmetrik/ngx-leaflet";
@@ -18,8 +17,10 @@ import { LocationComponent } from './cars/location/location.component';
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
 import {CheckoutComponent} from "./cars/checkout/checkout.component";
-import {OrderService} from "../services/order.service";
 import {MatNativeDateModule} from "@angular/material/core";
+import { HttpClientModule} from "@angular/common/http";
+import { CarSelectorComponent } from './cars/car-selector/car-selector.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
   declarations: [
@@ -27,9 +28,9 @@ import {MatNativeDateModule} from "@angular/material/core";
     CarsComponent,
     AboutComponent,
     ContactComponent,
-    CarlistComponent,
     LocationComponent,
     CheckoutComponent,
+    CarSelectorComponent,
   ],
   imports: [
     HomeModule,
@@ -37,6 +38,7 @@ import {MatNativeDateModule} from "@angular/material/core";
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatButtonModule,
     MatListModule,
     MatGridListModule,
@@ -44,8 +46,9 @@ import {MatNativeDateModule} from "@angular/material/core";
     LeafletModule,
     MatInputModule,
     MatNativeDateModule,
+    MatDatepickerModule,
   ],
-  providers: [OrderService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

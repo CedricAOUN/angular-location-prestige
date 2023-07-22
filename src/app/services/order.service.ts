@@ -49,13 +49,8 @@ export class OrderService {
   }
 
 
-  async convertToUsd(price: number) {
-    let usdRate: number = 0;
-    await fetch("https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_bxZZ3AqJUdqD337rhkVrNBqNauLvIg4xq9Vj6i9c&currencies=USD&base_currency=EUR")
-      .then(res => res.json())
-      .then(res => usdRate = res.data.USD)
-
-    return (price * usdRate).toFixed(2)
+  convertToUsd(price: number) {
+    return price * this.rate!;
   }
 
 

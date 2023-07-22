@@ -23,3 +23,23 @@ section > h1 {
   text-align: center;
   padding-top: 1rem;
 }
+
+.scroll-chevron {
+  background-color: rgba(255, 255, 255, 0.16);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.inverted {
+  background-color: rgba(0,0,0,0.16) !important;
+  color: white !important;
+}
+.inverted:hover {
+  background-color: rgba(0,0,0,1) !important;
+}
+
+.scroll-chevron:hover {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.5rem;
+  border-radius: 5px;
+}

@@ -27,7 +27,7 @@
         </mat-card-subtitle>
       </mat-card-header>
       <mat-card-actions>
-        <button mat-button color="primary" (click)="preloadCars(address, startDate, returnDate)">Voir les voitures</button>
+        <button mat-button color="warn" (click)="preloadCars(address, startDate, returnDate)">Voir les voitures</button>
       </mat-card-actions>
     </mat-card>
   </div>
@@ -46,7 +46,7 @@
         <p>Nous disposons d'une sélection des meilleures et des plus luxueuses marques de véhicules disponibles à la location. Tous sont prêts à vous être livrés, où que vous soyez et quand vous le souhaitez.</p>
       </div>
     </div>
-  <div (click)="scrollToId(delivery)" class="header-bottom-center scroll-chevron">
+  <div (click)="scrollToId(delivery)" class="header-bottom-center scroll-chevron inverted">
     <mat-icon aria-hidden="false" aria-label="expand more" fontIcon="expand_more"></mat-icon>
   </div>
 </section>

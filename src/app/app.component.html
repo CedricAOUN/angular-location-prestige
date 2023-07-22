@@ -1,10 +1,10 @@
 <div class="nav-container">
   <nav>
     <ul>
-      <li><a routerLink="/home" routerLinkActive="active">Acceuil</a></li>
-      <li><a routerLink="/cars">Voitures</a></li>
-      <li><a routerLink="/about">A Propos</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
+      <li><a routerLink="/home" routerLinkActive="active" (click)="scrollToId(top)"><img src="../assets/logo.png"></a></li>
+      <li><a routerLink="/cars" (click)="scrollToId(top)">Voitures</a></li>
+      <li><a routerLink="/about" (click)="scrollToId(top)">A Propos</a></li>
+      <li><a routerLink="/contact" (click)="scrollToId(top)">Contact</a></li>
     </ul>
   </nav>
 </div>
