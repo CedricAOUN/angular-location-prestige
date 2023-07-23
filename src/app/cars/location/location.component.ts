@@ -100,19 +100,6 @@ export class LocationComponent implements AfterViewInit, OnInit {
 
       }
     });
-    // await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&addressdetails=1&q=${value}`)
-    //   .then((res) => res.json())
-    //   .then(json => {
-    //     let adr = json[0].address
-    //     console.log(json)
-    //     if (!adr.town || !adr.road || !adr.house_number || !adr.postcode || !adr.country) {
-    //       this.errorMsg = "Adresse non valide. Veuillez saisir une adresse complète (par ex : 1 avenue Charles de Gaulle, 94100)."
-    //     } else {
-    //       this.orderService.changeAddress(`${adr.house_number} ${adr?.road + ","} ${adr?.postcode + ","} ${adr.town + ","} ${adr?.country}`);
-    //       this.closestBranch(json[0].lat, json[0].lon);
-    //       this.addAddressMarker(json[0].lat, json[0].lon);
-    //     }
-    //   })
   }
 
   closestBranch(lat: number, lng: number) {
@@ -135,6 +122,7 @@ export class LocationComponent implements AfterViewInit, OnInit {
           }
         })
         this.closeBranch = this.branches[index].name
+        this.addAddressPolyline([lat, lng], [this.branches[index].lat, this.branches[index].lng])
       },
       error: err => {
 
@@ -151,5 +139,14 @@ export class LocationComponent implements AfterViewInit, OnInit {
     this.addressMarker = L.marker([lat, lng], {icon: this.addressIcon, title: "Address"});
     this.map.addLayer(this.addressMarker)
     this.map.flyTo([lat, lng], 12);
+  }
+
+  private addressPolyline: L.Polyline = new L.Polyline([[0,0],[0,0]])
+  addAddressPolyline(addressLatLngs: [aLat: number, aLng: number], branchLatLngs: [bLat: number, bLng: number ]) {
+    if (this.map.hasLayer(this.addressPolyline)) {
+      this.map.removeLayer(this.addressPolyline);
+    }
+    this.addressPolyline = L.polyline([addressLatLngs, branchLatLngs],{color: 'red'} );
+    this.map.addLayer(this.addressPolyline);
   }
 }

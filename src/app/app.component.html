@@ -1,10 +1,10 @@
 <div class="nav-container">
   <nav>
     <ul>
-      <li><a routerLink="/home" routerLinkActive="active" (click)="scrollToId(top)"><img src="../assets/logo.png" alt="site logo"></a></li>
-      <li><a routerLink="/cars" (click)="scrollToId(top)">Voitures</a></li>
-      <li><a routerLink="/about" (click)="scrollToId(top)">A Propos</a></li>
-      <li><a routerLink="/contact" (click)="scrollToId(top)">Contact</a></li>
+      <li><a class="nav-link nav-link-image" routerLink="/home" routerLinkActive="active" (click)="scrollToId(top)"><img src="../assets/logo.png" alt="site logo"></a></li>
+      <li><a class="nav-link" routerLink="/cars" (click)="scrollToId(top)">Voitures</a></li>
+      <li><a class="nav-link" routerLink="/about" (click)="scrollToId(top)">A Propos</a></li>
+      <li><a class="nav-link" routerLink="/contact" (click)="scrollToId(top)">Contact</a></li>
     </ul>
   </nav>
 </div>
@@ -12,7 +12,7 @@
 <router-outlet></router-outlet>
 <footer>
   <div class="footer-container">
-    <button mat-button color="primary" (click)="scrollToId(top)">Haut de la page</button>
+    <a mat-button color="primary" (click)="scrollToId(top)">Haut de la page</a>
     <a class="github-link" mat-button color="primary" href="https://github.com/CedricAOUN/" target="_blank">GitHub du développeur</a>
     <img class="footer-logo" src="assets/logo.png" alt="site logo">
   </div>

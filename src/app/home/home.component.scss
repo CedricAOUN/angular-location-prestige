@@ -23,6 +23,12 @@
   background-color: hsl(0,0, 90, 0.8);
 }
 
+mat-card-subtitle, mat-card-title {
+  display: block;
+  width: max-content;
+}
+
+
 .card-input {
   margin-left: 1em;
   margin-right: 1em;
@@ -105,4 +111,24 @@ mat-card-actions {
 
 .delivery-img {
   border-radius: 5px;
+  max-width: 400px;
+}
+
+@media (max-width: 830px) {
+  mat-card-subtitle, mat-card-title {
+    display: block;
+    width: 100%;
+  }
+  .input {
+    width: 90%;
+  }
+  #delivery-info {
+    height: auto;
+  }
+  .delivery-container {
+    flex-direction: column;
+  }
+  .delivery-img {
+    max-width: 300px;
+  }
 }

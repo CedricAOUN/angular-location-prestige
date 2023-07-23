@@ -1,11 +1,11 @@
 .location-container {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding: 3em;
+  height: 400px;
 }
 
 .map-container {
@@ -28,6 +28,7 @@
 .form-container {
   flex-basis: 70%;
   width: 100%;
+  text-align: center;
 }
 
 mat-form-field {
