@@ -32,14 +32,10 @@ export class HomeComponent extends AppComponent implements OnInit {
 
 
   preloadCars(addr: string, date: Date, returnDate: Date) {
-    returnDate.setHours(0,0,0,0);
-    date.setHours(0,0,0,0)
-    let milliseconds = returnDate.getTime() - date.getTime();
-    let days = milliseconds / (1000 * 3600 * 24);
     if(addr) {
       this.router.navigate(['/cars'])
       this.orderService.changeAddress(addr)
-      this.orderService.changeDays(days)
+      this.orderService.changeDays(this.orderService.calculateDays(date, returnDate))
       this.orderService.changeStartDate(date)
       this.orderService.changeEndDate(returnDate);
     } else {

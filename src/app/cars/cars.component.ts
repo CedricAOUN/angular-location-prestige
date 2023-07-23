@@ -27,9 +27,11 @@ export class CarsComponent extends AppComponent implements OnInit {
   }
 
   changeStart(date: Date) {
-    this.orderService.changeStartDate(date)
+    this.orderService.changeStartDate(date);
+    this.orderService.changeDays(this.orderService.calculateDays(date, this.endDate));
   }
   changeEnd(date: Date) {
-    this.orderService.changeEndDate(date)
+    this.orderService.changeEndDate(date);
+    this.orderService.changeDays(this.orderService.calculateDays( this.startDate, date));
   }
 }

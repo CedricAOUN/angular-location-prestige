@@ -2,9 +2,7 @@
   <h1 id="section-header">Sélectionner une voiture</h1>
   <div class="car-container">
     <app-car-selector></app-car-selector>
-<!--      <app-carlist></app-carlist>-->
   </div>
-
   <div (click)="scrollToId(area)" class="centered-text scroll-chevron chevron-position">
     <mat-icon aria-hidden="false" aria-label="expand mode" fontIcon="expand_more"></mat-icon>
   </div>
@@ -21,22 +19,18 @@
   <div class="dates-container">
     <mat-form-field class="input" color="accent">
       <mat-label>Date de retrait:</mat-label>
-      <input [(ngModel)]="startDate" matInput matNativeControl="datetime-local" name="receive" class="card-input" [matDatepicker]="receivePicker" (click)="receivePicker.open()" [min]="minDate">
+      <input [(ngModel)]="startDate" matInput matNativeControl="datetime-local" name="receive" class="card-input" [matDatepicker]="receivePicker" (click)="receivePicker.open()" [min]="minDate" (dateChange)="changeStart(startDate)">
 
       <mat-datepicker-toggle matPrefix [for]="receivePicker" ></mat-datepicker-toggle>
       <mat-datepicker #receivePicker [touchUi]="true"></mat-datepicker>
-      <button class="modify-btn" mat-raised-button matSuffix color="primary" (click)="changeStart(startDate)">Modifier</button>
     </mat-form-field>
     <mat-form-field class="input" color="accent">
       <mat-label>Date de retour:</mat-label>
-      <input [(ngModel)]="endDate" matInput matNativeControl="datetime-local" name="return" class="card-input" [matDatepicker]="returnPicker" (click)="returnPicker.open()" [min]="minDate">
+      <input [(ngModel)]="endDate" matInput matNativeControl="datetime-local" name="return" class="card-input" [matDatepicker]="returnPicker" (click)="returnPicker.open()" [min]="minDate" (dateChange)="changeEnd(endDate)">
 
       <mat-datepicker-toggle matPrefix [for]="returnPicker"></mat-datepicker-toggle>
       <mat-datepicker #returnPicker [touchUi]="true"></mat-datepicker>
-      <button class="modify-btn" mat-raised-button matSuffix color="primary" (click)="changeEnd(endDate)">Modifier</button>
     </mat-form-field>
-
-<!--    <button mat-raised-button color="primary" matSuffix [for]="returnPicker">Modifier</button>-->
   </div>
 
   <div (click)="scrollToId(payment)" class="centered-text scroll-chevron chevron-position">

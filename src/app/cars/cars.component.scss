@@ -40,6 +40,7 @@ app-checkout {
 
 #dates-selector {
   background-color: #282828;
+  height: auto;
 }
 
 #dates-selector > h1 {
@@ -54,12 +55,13 @@ app-checkout {
 }
 
 .dates-container {
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1em;
   align-items: center;
+  padding: 3em;
 }
 .modify-btn {
   flex-basis: 10%;
