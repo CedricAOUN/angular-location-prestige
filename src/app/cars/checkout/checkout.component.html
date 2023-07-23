@@ -1,0 +1,30 @@
+
+<div class="checkout-container">
+  <div class="review-container">
+    <h2>Détails de la location:</h2>
+    <p><b>Voiture choisi:</b> {{car.brand}} - {{car.model}}</p>
+    <p><b>Adresse de livraison:</b> {{address}}</p>
+    <p><b>Date de retrait:</b> {{startDate.getDate()}}/{{startDate.getMonth()}}/{{startDate.getFullYear()}}</p>
+    <p><b>Date de retour:</b> {{endDate.getDate()}}/{{endDate.getMonth()}}/{{endDate.getFullYear()}}</p>
+    <p><b>Prix:</b> {{car.rent}}€ par jour</p>
+  </div>
+  <div class="payment-container">
+    <form action="/charge" method="post" id="payment-form">
+      <div class="form-row">
+        <h2 for="card-element">
+          Détails carte credit:
+        </h2>
+        <div  id="card-element">
+          <!-- a Stripe Element will be inserted here. -->
+        </div>
+        <div id="cvc-element"></div>
+        <div id="expiry-element"></div>
+
+        <!-- Used to display form errors -->
+        <div id="card-errors" role="alert"></div>
+      </div>
+      <p>Montant a payer: {{getPrice()}}</p>
+      <button mat-button class="pay-button">Payer</button>
+    </form>
+  </div>
+</div>

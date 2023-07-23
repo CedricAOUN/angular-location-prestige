@@ -1,0 +1,20 @@
+<div class="location-container">
+  <div class="map-container">
+    <div class="map-frame">
+      <div id="map"></div>
+    </div>
+  </div>
+  <div class="form-container">
+    <form type="form">
+      <mat-form-field color="accent">
+        <mat-label>Adresse:</mat-label>
+        <input matInput type="search" name="search" [autocomplete]="currentAddress" [(ngModel)]="searchValue">
+        <button type="submit" mat-button matSuffix mat-stroked-button aria-label="search" (click)="addressSearch(searchValue)">
+          <mat-icon>search</mat-icon>
+        </button></mat-form-field>
+      <p *ngIf="errorMsg" class="error-msg">{{errorMsg}}</p>
+      <p>Adresse sélectionnée: {{currentAddress}}</p>
+      <p>Agence la plus proche: {{closeBranch}}</p>
+    </form>
+  </div>
+</div>

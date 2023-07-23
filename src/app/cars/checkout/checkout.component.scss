@@ -1,0 +1,35 @@
+.checkout-container {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+}
+.review-container {
+  flex-basis: 70%;
+}
+.payment-container {
+  background-color: #8c8c8c;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+
+.form-row {
+  text-align: center;
+
+}
+
+#card-element, #cvc-element, #expiry-element {
+  margin-bottom: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.pay-button {
+  background-color: rgba(124, 252, 0, 0.53);
+}
+
+
+
+

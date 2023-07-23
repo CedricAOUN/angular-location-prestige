@@ -1,0 +1,40 @@
+.location-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.map-container {
+  flex-grow: 1;
+  min-height: 300px;
+  height: auto;
+  width: auto;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.form-container {
+  flex-basis: 70%;
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.error-msg {
+  color: red;
+}
+
