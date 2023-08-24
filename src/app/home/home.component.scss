@@ -1,8 +1,9 @@
 .header-img {
-  height: calc(100vh - 70px);
-  min-height: 720px;
-  min-width: 1080px;
+  display: block;
+  max-height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   width: 100%;
+  height: auto;
 }
 
 .header-center {
